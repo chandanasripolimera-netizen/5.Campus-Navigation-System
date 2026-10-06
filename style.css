@@ -1,0 +1,1103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background:
+        linear-gradient(
+            rgba(25, 55, 90, 0.82),
+            rgba(20, 90, 70, 0.82)
+        ),
+        url("https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=2000&q=80");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    color: #222;
+}
+
+
+/* HEADER */
+
+.header {
+
+    background:
+        linear-gradient(
+            135deg,
+            #4527a0,
+            #1565c0,
+            #00897b
+        );
+
+    color: white;
+
+    padding: 25px;
+
+    box-shadow:
+        0 5px 20px rgba(0,0,0,0.3);
+}
+
+
+.header-content {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+.header h1 {
+
+    font-size: 34px;
+
+    margin-bottom: 8px;
+}
+
+
+.header p {
+
+    font-size: 16px;
+
+    opacity: 0.9;
+}
+
+
+.college-badge {
+
+    font-size: 60px;
+
+    background: rgba(255,255,255,0.2);
+
+    padding: 10px 20px;
+
+    border-radius: 20px;
+}
+
+
+
+/* MAIN */
+
+.container {
+
+    width: 95%;
+
+    max-width: 1250px;
+
+    margin: 30px auto;
+}
+
+
+
+/* CONTROL PANEL */
+
+.control-panel {
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff,
+            #e3f2fd
+        );
+
+    padding: 25px;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,0.25);
+
+    margin-bottom: 25px;
+}
+
+
+.control-panel h2 {
+
+    color: #4527a0;
+
+    margin-bottom: 20px;
+}
+
+
+.controls {
+
+    display: flex;
+
+    gap: 15px;
+
+    align-items: end;
+
+    flex-wrap: wrap;
+}
+
+
+.input-group {
+
+    flex: 1;
+
+    min-width: 190px;
+}
+
+
+label {
+
+    display: block;
+
+    font-weight: bold;
+
+    margin-bottom: 8px;
+
+    color: #37474f;
+}
+
+
+select {
+
+    width: 100%;
+
+    padding: 13px;
+
+    border-radius: 10px;
+
+    border: 2px solid #90caf9;
+
+    background: white;
+
+    font-size: 14px;
+
+    cursor: pointer;
+}
+
+
+select:focus {
+
+    outline: none;
+
+    border-color: #7e57c2;
+}
+
+
+
+/* BUTTONS */
+
+button {
+
+    border: none;
+
+    padding: 14px 20px;
+
+    border-radius: 10px;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.find-btn {
+
+    background:
+        linear-gradient(
+            135deg,
+            #7b1fa2,
+            #512da8
+        );
+
+    color: white;
+}
+
+
+.find-btn:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 6px 15px rgba(81,45,168,0.4);
+}
+
+
+.reset-btn {
+
+    background:
+        linear-gradient(
+            135deg,
+            #ef5350,
+            #c62828
+        );
+
+    color: white;
+}
+
+
+.reset-btn:hover {
+
+    transform: translateY(-3px);
+}
+
+
+
+/* MAP */
+
+.map-container {
+
+    background: white;
+
+    padding: 20px;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,0.25);
+}
+
+
+.map-title {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 15px;
+}
+
+
+.map-title h2 {
+
+    color: #1565c0;
+}
+
+
+.map-title span {
+
+    background: #fff3e0;
+
+    padding: 8px 15px;
+
+    border-radius: 20px;
+
+    color: #e65100;
+
+    font-weight: bold;
+}
+
+
+
+/* CAMPUS */
+
+.campus-map {
+
+    position: relative;
+
+    height: 650px;
+
+    overflow: hidden;
+
+    border-radius: 18px;
+
+    border: 6px solid white;
+
+    background:
+
+        linear-gradient(
+            rgba(129,199,132,0.82),
+            rgba(102,187,106,0.82)
+        ),
+        url("https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=2000&q=80");
+
+    background-size: cover;
+
+    background-position: center;
+
+    box-shadow:
+        inset 0 0 40px rgba(0,0,0,0.25);
+}
+
+
+
+/* ROADS */
+
+.road {
+
+    position: absolute;
+
+    background: #616161;
+
+    border: 4px solid #9e9e9e;
+
+    border-radius: 30px;
+
+    z-index: 1;
+
+    box-shadow:
+        inset 0 0 10px rgba(0,0,0,0.4);
+}
+
+
+.road-horizontal {
+
+    width: 95%;
+
+    height: 35px;
+
+    top: 47%;
+
+    left: 2.5%;
+}
+
+
+.road-horizontal2 {
+
+    width: 80%;
+
+    height: 28px;
+
+    top: 72%;
+
+    left: 10%;
+}
+
+
+.road-vertical {
+
+    width: 35px;
+
+    height: 95%;
+
+    left: 47%;
+
+    top: 2.5%;
+}
+
+
+.road-vertical2 {
+
+    width: 28px;
+
+    height: 70%;
+
+    right: 18%;
+
+    top: 15%;
+}
+
+
+.road-diagonal1 {
+
+    width: 45%;
+
+    height: 25px;
+
+    top: 30%;
+
+    left: 20%;
+
+    transform: rotate(28deg);
+}
+
+
+.road-diagonal2 {
+
+    width: 45%;
+
+    height: 25px;
+
+    top: 65%;
+
+    left: 15%;
+
+    transform: rotate(-25deg);
+}
+
+
+
+/* LOCATIONS */
+
+.location {
+
+    position: absolute;
+
+    width: 115px;
+
+    height: 78px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 30px;
+
+    border-radius: 16px;
+
+    background: white;
+
+    border: 4px solid #3949ab;
+
+    z-index: 5;
+
+    box-shadow:
+        0 7px 15px rgba(0,0,0,0.35);
+
+    transition: 0.3s;
+}
+
+
+.location span {
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    margin-top: 3px;
+}
+
+
+.location:hover {
+
+    transform: scale(1.12) rotate(-2deg);
+
+    z-index: 10;
+}
+
+
+
+/* DIFFERENT BUILDING COLORS */
+
+.hostel {
+
+    left: 4%;
+
+    top: 8%;
+
+    border-color: #e53935;
+}
+
+
+.cse {
+
+    right: 4%;
+
+    top: 8%;
+
+    border-color: #1e88e5;
+}
+
+
+.ece {
+
+    right: 4%;
+
+    bottom: 7%;
+
+    border-color: #8e24aa;
+}
+
+
+.library {
+
+    left: 42%;
+
+    top: 5%;
+
+    border-color: #fb8c00;
+}
+
+
+.canteen {
+
+    left: 5%;
+
+    top: 52%;
+
+    border-color: #f4511e;
+}
+
+
+.admin {
+
+    right: 6%;
+
+    top: 50%;
+
+    border-color: #3949ab;
+}
+
+
+.sports {
+
+    left: 4%;
+
+    bottom: 7%;
+
+    border-color: #43a047;
+}
+
+
+.auditorium {
+
+    left: 41%;
+
+    bottom: 5%;
+
+    border-color: #6d4c41;
+}
+
+
+.mechanical {
+
+    left: 19%;
+
+    top: 20%;
+
+    border-color: #546e7a;
+}
+
+
+.civil {
+
+    right: 20%;
+
+    top: 25%;
+
+    border-color: #ffb300;
+}
+
+
+.medical {
+
+    left: 20%;
+
+    bottom: 10%;
+
+    border-color: #e91e63;
+}
+
+
+.lab {
+
+    right: 25%;
+
+    bottom: 22%;
+
+    border-color: #00acc1;
+}
+
+
+.garden {
+
+    left: 42%;
+
+    top: 42%;
+
+    width: 125px;
+
+    height: 85px;
+
+    background: #c8e6c9;
+
+    border-color: #2e7d32;
+}
+
+
+.parking {
+
+    right: 2%;
+
+    top: 35%;
+
+    border-color: #455a64;
+}
+
+
+
+/* ACTIVE ROUTE LOCATIONS */
+
+.active-start {
+
+    background: #c8e6c9 !important;
+
+    border-color: #1b5e20 !important;
+
+    transform: scale(1.15);
+
+    box-shadow:
+        0 0 25px #00e676;
+
+    animation: pulse 1s infinite;
+}
+
+
+.active-end {
+
+    background: #ffcdd2 !important;
+
+    border-color: #b71c1c !important;
+
+    transform: scale(1.15);
+
+    box-shadow:
+        0 0 25px #ff1744;
+
+    animation: pulse 1s infinite;
+}
+
+
+@keyframes pulse {
+
+    50% {
+
+        box-shadow:
+            0 0 35px rgba(255,255,255,0.9);
+    }
+}
+
+
+
+/* TREES */
+
+.tree {
+
+    position: absolute;
+
+    font-size: 32px;
+
+    z-index: 2;
+
+    filter: drop-shadow(
+        2px 3px 2px rgba(0,0,0,0.3)
+    );
+}
+
+
+.tree1 {
+    left: 30%;
+    top: 8%;
+}
+
+.tree2 {
+    left: 70%;
+    top: 5%;
+}
+
+.tree3 {
+    left: 34%;
+    bottom: 5%;
+}
+
+.tree4 {
+    right: 30%;
+    bottom: 7%;
+}
+
+.tree5 {
+    left: 2%;
+    top: 37%;
+}
+
+.tree6 {
+    right: 2%;
+    bottom: 30%;
+}
+
+
+.flower {
+
+    position: absolute;
+
+    font-size: 25px;
+
+    z-index: 2;
+}
+
+
+.flower1 {
+    left: 35%;
+    top: 55%;
+}
+
+.flower2 {
+    right: 35%;
+    top: 55%;
+}
+
+.flower3 {
+    left: 75%;
+    bottom: 5%;
+}
+
+
+
+/* ROUTE SVG */
+
+#routeSvg {
+
+    position: absolute;
+
+    width: 100%;
+
+    height: 100%;
+
+    left: 0;
+
+    top: 0;
+
+    z-index: 4;
+
+    pointer-events: none;
+}
+
+
+.route-line {
+
+    fill: none;
+
+    stroke: #ff1744;
+
+    stroke-width: 8;
+
+    stroke-linecap: round;
+
+    stroke-linejoin: round;
+
+    stroke-dasharray: 15 10;
+
+    animation:
+        routeAnimation 0.8s linear infinite;
+
+    filter:
+        drop-shadow(
+            0 0 5px rgba(255,23,68,0.8)
+        );
+}
+
+
+@keyframes routeAnimation {
+
+    to {
+
+        stroke-dashoffset: -25;
+    }
+}
+
+
+
+/* LEGEND */
+
+.legend {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 35px;
+
+    flex-wrap: wrap;
+
+    padding: 15px;
+
+    margin-top: 10px;
+}
+
+
+.legend div {
+
+    font-weight: bold;
+}
+
+
+.legend-start,
+.legend-end {
+
+    display: inline-block;
+
+    width: 17px;
+
+    height: 17px;
+
+    border-radius: 50%;
+
+    margin-right: 5px;
+}
+
+
+.legend-start {
+
+    background: #00c853;
+}
+
+
+.legend-end {
+
+    background: #ff1744;
+}
+
+
+.legend-route {
+
+    display: inline-block;
+
+    width: 35px;
+
+    height: 7px;
+
+    background: #ff1744;
+
+    margin-right: 5px;
+}
+
+
+
+/* RESULT */
+
+.result-panel {
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff,
+            #f3e5f5
+        );
+
+    margin-top: 25px;
+
+    padding: 25px;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,0.25);
+}
+
+
+.result-panel h2 {
+
+    color: #6a1b9a;
+
+    margin-bottom: 12px;
+}
+
+
+#resultText {
+
+    padding: 15px;
+
+    background: #e8eaf6;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+}
+
+
+
+/* INFO CARDS */
+
+.route-info {
+
+    display: flex;
+
+    gap: 15px;
+
+    margin: 20px 0;
+
+    flex-wrap: wrap;
+}
+
+
+.info-card {
+
+    flex: 1;
+
+    min-width: 180px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 15px;
+
+    border-radius: 12px;
+
+    background: white;
+
+    border-left: 5px solid #7e57c2;
+
+    box-shadow:
+        0 3px 10px rgba(0,0,0,0.1);
+}
+
+
+.info-card > span {
+
+    font-size: 30px;
+}
+
+
+.info-card small {
+
+    display: block;
+
+    color: #777;
+}
+
+
+.info-card strong {
+
+    font-size: 18px;
+
+    color: #4527a0;
+}
+
+
+
+/* ROUTE DETAILS */
+
+#routeDetails {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    align-items: center;
+
+    gap: 7px;
+}
+
+
+.route-node {
+
+    background:
+        linear-gradient(
+            135deg,
+            #42a5f5,
+            #7e57c2
+        );
+
+    color: white;
+
+    padding: 10px 14px;
+
+    border-radius: 20px;
+
+    font-weight: bold;
+
+    box-shadow:
+        0 3px 8px rgba(0,0,0,0.2);
+}
+
+
+.arrow {
+
+    font-size: 20px;
+
+    color: #e53935;
+
+    font-weight: bold;
+}
+
+
+
+/* FOOTER */
+
+footer {
+
+    margin-top: 30px;
+
+    padding: 30px;
+
+    text-align: center;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #311b92,
+            #00695c
+        );
+}
+
+
+footer h3 {
+
+    margin-bottom: 8px;
+}
+
+
+footer p {
+
+    margin: 5px;
+
+    opacity: 0.9;
+}
+
+
+
+/* RESPONSIVE */
+
+@media(max-width: 800px) {
+
+    .header-content {
+
+        flex-direction: column;
+
+        gap: 15px;
+
+        text-align: center;
+    }
+
+
+    .header h1 {
+
+        font-size: 25px;
+    }
+
+
+    .campus-map {
+
+        height: 600px;
+    }
+
+
+    .location {
+
+        width: 90px;
+
+        height: 65px;
+
+        font-size: 23px;
+    }
+
+
+    .location span {
+
+        font-size: 9px;
+    }
+
+
+    .tree {
+
+        font-size: 22px;
+    }
+}

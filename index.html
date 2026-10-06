@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Campus Navigation</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="header">
+
+    <div class="header-content">
+
+        <div>
+            <h1>🎓 Smart Campus Navigation</h1>
+            <p>Explore the campus and find the shortest route</p>
+        </div>
+
+        <div class="college-badge">
+            🏫
+        </div>
+
+    </div>
+
+</header>
+
+
+<main class="container">
+
+
+    <!-- CONTROL PANEL -->
+
+    <section class="control-panel">
+
+        <h2>🧭 Find Your Route</h2>
+
+        <div class="controls">
+
+            <div class="input-group">
+
+                <label>📍 Starting Point</label>
+
+                <select id="start">
+
+                    <option value="Hostel">🏠 Hostel</option>
+                    <option value="CSE">💻 CSE Block</option>
+                    <option value="ECE">⚡ ECE Block</option>
+                    <option value="Library">📚 Library</option>
+                    <option value="Canteen">🍕 Canteen</option>
+                    <option value="Admin">🏢 Admin Block</option>
+                    <option value="Sports">⚽ Sports Complex</option>
+                    <option value="Auditorium">🎭 Auditorium</option>
+                    <option value="Mechanical">⚙️ Mechanical Block</option>
+                    <option value="Civil">🏗️ Civil Block</option>
+                    <option value="Medical">🏥 Medical Center</option>
+                    <option value="Lab">🧪 Research Lab</option>
+                    <option value="Garden">🌳 Central Garden</option>
+                    <option value="Parking">🚗 Parking</option>
+
+                </select>
+
+            </div>
+
+
+            <div class="input-group">
+
+                <label>🎯 Destination</label>
+
+                <select id="destination">
+
+                    <option value="CSE">💻 CSE Block</option>
+                    <option value="Hostel">🏠 Hostel</option>
+                    <option value="ECE">⚡ ECE Block</option>
+                    <option value="Library">📚 Library</option>
+                    <option value="Canteen">🍕 Canteen</option>
+                    <option value="Admin">🏢 Admin Block</option>
+                    <option value="Sports">⚽ Sports Complex</option>
+                    <option value="Auditorium">🎭 Auditorium</option>
+                    <option value="Mechanical">⚙️ Mechanical Block</option>
+                    <option value="Civil">🏗️ Civil Block</option>
+                    <option value="Medical">🏥 Medical Center</option>
+                    <option value="Lab">🧪 Research Lab</option>
+                    <option value="Garden">🌳 Central Garden</option>
+                    <option value="Parking">🚗 Parking</option>
+
+                </select>
+
+            </div>
+
+
+            <div class="input-group">
+
+                <label>🧠 Algorithm</label>
+
+                <select id="algorithm">
+
+                    <option value="dijkstra">
+                        Dijkstra - Shortest Distance
+                    </option>
+
+                    <option value="bfs">
+                        BFS - Shortest Path
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <button id="findRoute" class="find-btn">
+                🚀 Find Route
+            </button>
+
+            <button id="reset" class="reset-btn">
+                🔄 Reset
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- CAMPUS MAP -->
+
+    <section class="map-container">
+
+        <div class="map-title">
+
+            <h2>🗺️ Interactive College Campus</h2>
+
+            <span>🌞 Campus Map</span>
+
+        </div>
+
+
+        <div class="campus-map" id="campusMap">
+
+
+            <!-- DECORATIONS -->
+
+            <div class="tree tree1">🌳</div>
+            <div class="tree tree2">🌴</div>
+            <div class="tree tree3">🌳</div>
+            <div class="tree tree4">🌲</div>
+            <div class="tree tree5">🌴</div>
+            <div class="tree tree6">🌳</div>
+
+            <div class="flower flower1">🌷</div>
+            <div class="flower flower2">🌻</div>
+            <div class="flower flower3">🌺</div>
+
+
+            <!-- ROADS -->
+
+            <div class="road road-horizontal"></div>
+
+            <div class="road road-horizontal2"></div>
+
+            <div class="road road-vertical"></div>
+
+            <div class="road road-vertical2"></div>
+
+            <div class="road road-diagonal1"></div>
+
+            <div class="road road-diagonal2"></div>
+
+
+            <!-- BUILDINGS -->
+
+
+            <div class="location hostel" data-name="Hostel">
+                🏠
+                <span>Hostel</span>
+            </div>
+
+
+            <div class="location cse" data-name="CSE">
+                💻
+                <span>CSE Block</span>
+            </div>
+
+
+            <div class="location ece" data-name="ECE">
+                ⚡
+                <span>ECE Block</span>
+            </div>
+
+
+            <div class="location library" data-name="Library">
+                📚
+                <span>Library</span>
+            </div>
+
+
+            <div class="location canteen" data-name="Canteen">
+                🍕
+                <span>Canteen</span>
+            </div>
+
+
+            <div class="location admin" data-name="Admin">
+                🏢
+                <span>Admin Block</span>
+            </div>
+
+
+            <div class="location sports" data-name="Sports">
+                ⚽
+                <span>Sports Complex</span>
+            </div>
+
+
+            <div class="location auditorium" data-name="Auditorium">
+                🎭
+                <span>Auditorium</span>
+            </div>
+
+
+            <div class="location mechanical" data-name="Mechanical">
+                ⚙️
+                <span>Mechanical</span>
+            </div>
+
+
+            <div class="location civil" data-name="Civil">
+                🏗️
+                <span>Civil Block</span>
+            </div>
+
+
+            <div class="location medical" data-name="Medical">
+                🏥
+                <span>Medical Center</span>
+            </div>
+
+
+            <div class="location lab" data-name="Lab">
+                🧪
+                <span>Research Lab</span>
+            </div>
+
+
+            <div class="location garden" data-name="Garden">
+                🌳
+                <span>Central Garden</span>
+            </div>
+
+
+            <div class="location parking" data-name="Parking">
+                🚗
+                <span>Parking</span>
+            </div>
+
+
+            <!-- ROUTE -->
+
+            <svg id="routeSvg"></svg>
+
+        </div>
+
+
+        <!-- LEGEND -->
+
+        <div class="legend">
+
+            <div>
+                <span class="legend-start"></span>
+                Start
+            </div>
+
+            <div>
+                <span class="legend-end"></span>
+                Destination
+            </div>
+
+            <div>
+                <span class="legend-route"></span>
+                Route
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- RESULT -->
+
+    <section class="result-panel">
+
+        <h2>📍 Navigation Result</h2>
+
+        <div id="resultText">
+            Select locations and click
+            <strong>Find Route</strong>.
+        </div>
+
+        <div class="route-info">
+
+            <div class="info-card">
+
+                <span>🛣️</span>
+
+                <div>
+                    <small>Distance</small>
+                    <strong id="distance">--</strong>
+                </div>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <span>📍</span>
+
+                <div>
+                    <small>Locations</small>
+                    <strong id="locationCount">--</strong>
+                </div>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <span>🧠</span>
+
+                <div>
+                    <small>Algorithm</small>
+                    <strong id="algorithmUsed">--</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div id="routeDetails"></div>
+
+    </section>
+
+
+</main>
+
+
+<footer>
+
+    <h3>🎓 Smart Campus Navigation System</h3>
+
+    <p>
+        Powered by Dijkstra & BFS Algorithms
+    </p>
+
+    <p>
+        💻 HTML | 🎨 CSS | ⚡ JavaScript
+    </p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
